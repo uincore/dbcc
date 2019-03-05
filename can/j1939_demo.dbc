@@ -1,0 +1,70 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: TESTECU BIANSUXIANG SCR EBSECU DisPlay EngineECU
+VAL_TABLE_ FMI 31 "Not available" 19 "Received network data in error" 18 "Below normal (moderately severe)" 17 "Below normal (least severe)" 16 "Above normal (moderately severe)" 15 "Above normal (least severe)" 14 "Special intstructions" 13 "Out of calibration" 12 "Bad intelligent device" 11 "Root cause not known" 10 "Abnormal rate of change" 9 "Abnormal update rate" 8 "Abnormal frequency" 7 "Mechanical system not responding" 6 "Current above normal" 5 "Current below normal" 4 "Voltage below normal" 3 "Voltage above normal" 2 "Data erratic" 1 "Below normal (most severe)" 0 "Above normal (most severe)" ;
+
+
+BO_ 2566844672 CCVS1_EMS: 8 EngineECU
+ SG_ EngShutdownOverrideSwitch : 62|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngTestModeSwitch : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngIdleDecrementSwitch : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngIdleIncrementSwitch : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CruiseCtrlStates : 53|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ PTOGovernorState : 48|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ CruiseCtrlSetSpeed : 40|8@1+ (1,0) [0|250] "km/h" Vector__XXX
+ SG_ CruiseCtrlAccelerateSwitch : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CruiseCtrlResumeSwitch : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CruiseCtrlCoastSwitch : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CruiseCtrlSetSwitch : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ClutchSwitch : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BrakeSwitch : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CruiseCtrlEnableSwitch : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CruiseCtrlActive : 24|2@1+ (1,0) [0|3] ""  DisPlay
+ SG_ WheelBasedVehicleSpeed : 8|16@1+ (0.00390625,0) [0|250.996] "km/h" Vector__XXX
+ SG_ ParkBrakeReleaseInhibitRq : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CruiseCtrlPauseSwitch : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ParkingBrakeSwitch : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TwoSpeedAxleSwitch : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2364539904 EEC1_EMS: 8 EngineECU
+ SG_ EngDemandPercentTorque : 56|8@1+ (1,-125) [-125|125] "%"  DisPlay
+ SG_ EngStarterMode : 48|4@1+ (1,0) [0|15] ""  DisPlay
+ SG_ SrcAddrssOfCntrllngDvcForEngCtrl : 40|8@1+ (1,0) [0|255] ""  DisPlay
+ SG_ EngSpeed : 24|16@1+ (0.125,0) [0|8031.875] "rpm"  DisPlay
+ SG_ ActualEngPercentTorque : 16|8@1+ (1,-125) [-125|125] "%"  DisPlay
+ SG_ DriversDemandEngPercentTorque : 8|8@1+ (1,-125) [-125|125] "%"  DisPlay
+ SG_ ActlEngPrcntTorqueHighResolution : 4|4@1+ (0.125,0) [0|0.875] "%"  DisPlay
+ SG_ EngTorqueMode : 0|4@1+ (1,0) [0|15] ""  DisPlay
