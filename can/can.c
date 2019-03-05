@@ -11,6 +11,8 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
+#include "honda_civic_touring_2016_can_generated.h"
+
 static int open_can_device(const char *port)
 {
 	struct ifreq ifr;
@@ -33,6 +35,36 @@ static int open_can_device(const char *port)
 	if((r = bind(fd, (struct sockaddr *)&addr, sizeof(addr))) < 0)
 		return r;
 	return fd;
+}
+
+static uint64_t u64_from_can_msg(const uint8_t m[8]) {
+        return ((uint64_t)m[7] << 56) | ((uint64_t)m[6] << 48) | ((uint64_t)m[5] << 40) | ((uint64_t)m[4] << 32)
+                | ((uint64_t)m[3] << 24) | ((uint64_t)m[2] << 16) | ((uint64_t)m[1] << 8) | ((uint64_t)m[0] << 0);
+}
+
+static int process_can_message(struct can_frame *frame)
+{
+	can_obj_honda_civic_touring_2016_can_generated_h_t dbc;
+	uint64_t data;
+	double w_fl,w_fr,w_rl,w_rr;
+
+        data = u64_from_can_msg(frame->data);
+	
+	if( unpack_message(&dbc, frame->can_id, data, frame->can_dlc, 0) == 0) {
+		print_message(&dbc,frame->can_id, stdout); 
+		switch(frame->can_id){
+		  case 0x1d0:
+			decode_can_0x1d0_WHEEL_SPEED_FL(&dbc, &w_fl);
+			decode_can_0x1d0_WHEEL_SPEED_FR(&dbc, &w_fr);
+			decode_can_0x1d0_WHEEL_SPEED_RL(&dbc, &w_rl);
+			decode_can_0x1d0_WHEEL_SPEED_RR(&dbc, &w_rr);
+		  	printf("FL=%lf,FR=%lf,RL=%lf,RR=%lf\n", w_fl, w_fr, w_rl, w_rr);
+		  break;
+		  default:
+		  break;
+		}
+	}	
+	return 0;
 }
 
 static int read_can_loop(int port)
@@ -64,6 +96,7 @@ static int read_can_loop(int port)
 					for (unsigned i = 0; i < frame_rd.can_dlc; i++)
 						printf("%02x ", frame_rd.data[i]);
 					printf("\n");
+					process_can_message(&frame_rd);
 				}
 			}
 		}
@@ -101,9 +134,10 @@ static void help(void)
 
 int main(int argc, char **argv)
 {
-	char *port = "can0";
+	char *port = "vcan0";
 	int i;
 	int fd = 0;
+#if 0
 	for(i = 1; i < argc && argv[i][0] == '-'; i++)
 		switch(argv[i][1]) {
 		case '\0': /* stop argument processing */
@@ -124,6 +158,8 @@ int main(int argc, char **argv)
 			return EXIT_FAILURE;
 			break;
 		}
+#endif
+
 done:
 	fd = open_can_device(port);
 	if(fd < 0) {

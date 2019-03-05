@@ -28,3 +28,23 @@ Only show messages with ID 0x123 or ID 0x456:
 
 	cat /proc/net/can/version
 	cat /proc/net/can/stats
+
+
+#dinglx
+./dbcc -o can/ can/honda_civic_touring_2016_can_generated.dbc
+cd can
+make
+
+./setup
+
+termial a:
+cansend vcan0 17C#1000003000000000
+cansend vcan0 400#1000000000000000
+cansend vcan0 1d0#0ffd000000000000
+
+
+terminal b:
+./can     #default devices is vcan0
+
+
+
