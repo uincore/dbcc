@@ -14,7 +14,7 @@
 #include <macos/can.h>
 #include <macos/can/raw.h>
 
-#elif defined(__LINUX__)
+#elif defined(linux)
 
 #include <linux/can.h>
 #include <linux/can/raw.h>
