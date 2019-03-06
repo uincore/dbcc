@@ -1,0 +1,1150 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: EMSG6 LDW TPMS PS DCM BCM IC ECAS AMT VCU EMS
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 8 Vector__XXX
+ SG_ SPNsecondbyteofSPN : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OccurrenceCount : 0|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ SPN3mostsignificantbits : 0|3@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FMI : 0|5@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SPN8leastsignificantbitsofSPN : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ReservedforSAEassignmentLamp : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MalfunctionIndicatorLampStatus : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RedStopLampStatus : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AmberWarningLampStatus : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ProtectLampStatus : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566844951 LFE_IC: 8 IC
+ SG_ AverageFuelEconomy : 32|16@1+ (0.001953125,0) [0|127.998046875] "km/l" Vector__XXX
+ SG_ InstantaneousFuelEconomy : 16|16@1+ (0.001953125,0) [0|127.998046875] "km/L" Vector__XXX
+
+BO_ 2566842647 LFC_IC: 8 IC
+ SG_ TripFuel : 0|32@1+ (0.5,0) [0|2147483647.5] "L" Vector__XXX
+
+BO_ 2566841921 TD: 8 Vector__XXX
+ SG_ Year : 40|8@1+ (1,0) [0|250] "year"  IC
+ SG_ Day : 32|8@1+ (0.25,0) [0|62.5] "days"  IC
+ SG_ Month : 24|8@1+ (1,0) [0|250] "month"  IC
+ SG_ Hours : 16|8@1+ (1,0) [0|250] "h"  IC
+ SG_ Minutes : 8|8@1+ (1,0) [0|250] "min"  IC
+ SG_ Seconds : 0|8@1+ (0.25,0) [0|62.5] "s"  IC
+
+BO_ 2566893904 EPB1: 8 VCU
+ SG_ AutoholdWorkingStatus : 3|3@1+ (1,0) [0|0] ""  IC
+ SG_ EPBworkingmode : 0|3@1+ (1,0) [0|0] ""  IC
+
+BO_ 2566832622 VDHR_VCU: 8 VCU
+ SG_ HighResolutionTotalVehicleD : 0|32@1+ (0.005,0) [0|21474836.475] "km"  IC
+
+BO_ 2566783511 IC_2: 8 Vector__XXX
+ SG_ FuelLeakageAlert : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566882563 TC2DIS_ZF: 8 EMSG6
+ SG_ PTO2Active_Reserved : 26|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PTO1Active_Reserved : 24|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TemperaturetooHigh : 14|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LowAirPressure : 12|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ClutchOverload : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ClutchWear : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Automatic_mode : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManoeuveringMode : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ WorkshopRequest_SpannerWarnning : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ StopRequest : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566801923 ETC7: 8 EMSG6
+ SG_ TransmissionModeIndicator : 22|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566878208 EMS_3: 8 EMSG6
+ SG_ DriverInducementIndicatorStatus : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566719232 DLCC1_EMS: 8 EMSG6
+ SG_ EngineFuelFilterRestriLampCom : 22|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ EngineOilPressureLowLampCommand : 12|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566848279 OI: 8 IC
+ SG_ WaterInFuelIndicator : 0|2@1+ (1,0) [0|0] ""  EMSG6
+
+BO_ 2566718743 DLCD1: 8 IC
+ SG_ EngineAirFilterRestrictionLamp : 20|2@1+ (1,0) [0|0] ""  EMSG6
+ SG_ EngineCoolantLevelLowLampData : 16|2@1+ (1,0) [0|0] ""  EMSG6
+
+BO_ 2564882176 CM1_EMS: 8 EMSG6
+ SG_ DieselParticulateFilterReg : 42|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566749184 DPFC1: 8 EMSG6
+ SG_ DieselParticulateFilterStatus : 12|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DieselParticulateFilterActiveReg : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DieselParticulateFilterLampCom : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566901992 LDW_FCW1: 8 LDW
+ SG_ VehicleSpeedLimitValue : 40|16@1+ (0.00390625,0) [0|255.99609375] "km/h" Vector__XXX
+ SG_ VehicleSpeedLimitStatus : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VehicleSpeedLimitWarning : 35|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CalibrationStatus : 32|3@1+ (1,0) [0|0] ""  IC
+ SG_ DSMWarningStatus : 19|3@1+ (1,0) [0|0] ""  IC
+ SG_ DSM_Status : 16|3@1+ (1,0) [0|0] ""  IC
+ SG_ LDWStatus : 0|3@1+ (1,0) [0|0] ""  IC
+
+BO_ 2566806504 FLI2: 8 LDW
+ SG_ LaneDeparturewarning : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LaneTrackingStatusLeftSide : 4|2@1+ (1,0) [0|0] ""  IC
+ SG_ LaneTrackingStatusRightSide : 2|2@1+ (1,0) [0|0] ""  IC
+
+BO_ 2431649768 FLI1: 8 LDW
+ SG_ LaneDepartureImminentRIGHT : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneDepartureImminentLeft : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LaneDepartureRight : 2|2@1+ (1,0) [0|0] ""  IC
+ SG_ LaneDepartureLeft : 0|2@1+ (1,0) [0|0] ""  IC
+
+BO_ 2566898739 TPSLI: 8 TPMS
+ SG_ TirePressureSensorSelfLearning : 8|3@1+ (1,0) [0|7] ""  IC
+ SG_ TireLocation_TPSLI : 0|8@1+ (1,0) [0|255] ""  IC
+
+BO_ 2566897971 TIRE3: 8 TPMS
+ SG_ TireSensorElectricalFault : 16|2@1+ (1,0) [0|0] ""  IC
+ SG_ TireSensorMatchStatus : 8|2@1+ (1,0) [0|0] ""  IC
+ SG_ TireLocation_TIRE3 : 0|8@1+ (1,0) [0|255] ""  IC
+
+BO_ 2566764851 TPRI: 8 TPMS
+ SG_ ReferenceTirePressure : 8|8@1+ (8,0) [0|2040] ""  IC
+ SG_ TireLocation_TPRI : 0|8@1+ (1,0) [0|255] ""  IC
+
+BO_ 2566668851 TIRE2: 8 TPMS
+ SG_ RequiredTirePressure : 24|16@1+ (1,0) [0|65535] "kpa"  IC
+ SG_ TirePressure_TIRE2 : 8|16@1+ (1,0) [0|0] "kpa"  IC
+ SG_ TireLocation_TIRE2 : 0|8@1+ (1,0) [0|255] ""  IC
+
+BO_ 2566845491 TIRE1: 8 TPMS
+ SG_ TirePressure_TIRE1 : 8|8@1+ (4,0) [0|1020] "kpa"  IC
+ SG_ TirePressureThresholdDetection : 61|3@1+ (1,0) [0|0] ""  IC
+ SG_ TireAirLeakageRate : 40|16@1+ (0.1,0) [0|6553.5] "pa/s"  IC
+ SG_ ExtendedTirePressureSupport : 38|2@1+ (1,0) [0|3] ""  IC
+ SG_ TireStatus : 34|2@1+ (1,0) [0|0] ""  IC
+ SG_ TireTemperature : 16|16@1+ (0.03125,-273) [-273|1774.96875] "¡æ"  IC
+ SG_ TireLocation_TIRE1 : 0|8@1+ (1,0) [0|255] ""  IC
+
+BO_ 2566898455 TPSLS: 8 IC
+ SG_ TirePressureSensorSelfLearning : 8|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TireLocation_TPSLS : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2561553175 TPRS: 8 IC
+ SG_ ReferenceTirePressureSetting : 8|8@1+ (8,0) [0|2000] "kpa"  TPMS
+ SG_ TireLocation_TPRS : 0|8@1+ (1,0) [0|255] ""  TPMS
+
+BO_ 2566834740 DM1_PS: 8 PS
+ SG_ OccurrenceCountPS : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ FMI_PS : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPNsecondbyteofSPNPS : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPNConversionMethodPS : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ SPN3mostsignificantbitsPS : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantbitsPS : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ MalfunctiongIndicatorLampPS : 6|2@1+ (1,0) [0|3] ""  IC
+ SG_ RedStopLampStatusPS : 4|2@1+ (1,0) [0|3] ""  IC
+ SG_ AmberWarningLampStatusPS : 2|2@1+ (1,0) [0|3] ""  IC
+ SG_ ProtectLampStatusPS : 0|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566897716 PS_1: 8 PS
+ SG_ SmartKeyBatteryStatus : 12|2@1+ (1,0) [0|3] ""  IC
+ SG_ ESCLNotLockWarning : 10|2@1+ (1,0) [0|0] ""  IC
+ SG_ ESCLNotUnlockWarning : 8|2@1+ (1,0) [0|3] ""  IC
+ SG_ SmartStartConditionWarning : 6|2@1+ (1,0) [0|0] ""  IC
+ SG_ NoLegalSmartKeyIdentified : 4|2@1+ (1,0) [0|3] ""  IC
+ SG_ NoLegalSmartKeyInsideVehicle : 2|2@1+ (1,0) [0|3] ""  IC
+ SG_ PowerOffBeforeLeavingVehicle : 0|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566834762 DM1_FM: 8 Vector__XXX
+ SG_ SPNsecondbyteofSPNFM : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantbitsFM : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPNConversionMethodFM : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ SPN3mostsignificantbitsFM : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ ReservedforSAEassignmentFM : 8|8@1+ (1,0) [0|0] ""  IC
+ SG_ RedStopLampStatusFM : 4|2@1+ (1,0) [0|3] ""  IC
+ SG_ ProtectLampStatusFM : 0|2@1+ (1,0) [0|3] ""  IC
+ SG_ OccurrenceCountFM : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ MalfunctiongIndicatorLampFM : 6|2@1+ (1,0) [0|3] ""  IC
+ SG_ FMI_FM : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ AmberWarningLampStatusFM : 2|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566834924 DM1_DCM: 8 DCM
+ SG_ FMI_DCM : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPNsecondbyteofSPNDCM : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPNConversionMethodDCM : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantbitsDCM : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN3mostsignificantbitsDCM : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ ReservedforSAEassignmentDCM : 8|8@1+ (1,0) [0|0] ""  IC
+ SG_ RedStopLampStatusDCM : 4|2@1+ (1,0) [0|3] ""  IC
+ SG_ ProtectLampStatusDCM : 0|2@1+ (1,0) [0|3] ""  IC
+ SG_ OccurrenceCountDCM : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ AmberWarningLampStatusDCM : 2|2@1+ (1,0) [0|3] ""  IC
+ SG_ MalfunctiongIndicatorLampDCM : 6|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566834721 DM1_BCM: 8 BCM
+ SG_ SPNsecondbyteofSPNBCM : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPNConversionMethodBCM : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantbitsBCM : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN3mostsignificantbitsBCM : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ ReservedforSAEassignmentBCM : 8|8@1+ (1,0) [0|0] ""  IC
+ SG_ RedStopLampStatusBCM : 4|2@1+ (1,0) [0|3] ""  IC
+ SG_ ProtectLampStatusBCM : 0|2@1+ (1,0) [0|3] ""  IC
+ SG_ OccurrenceCountBCM : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ MalfunctiongIndicatorLampBCM : 6|2@1+ (1,0) [0|3] ""  IC
+ SG_ FMI_BCM : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ AmberWarningLampStatusBCM : 2|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566834920 DM1_LDW: 8 Vector__XXX
+ SG_ OccurrenceCountLDW : 41|7@1+ (1,0) [0|126] ""  IC
+ SG_ SPNConversionMethodLDW : 40|1@1+ (1,0) [0|0] ""  IC
+ SG_ SPN3mostsignificantbitsLDW : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ FMI_LDW : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPNsecondbyteofSPNLDW : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantbitsLDW : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ ReservedforSAEassignmentLDW : 8|8@1+ (1,0) [0|0] ""  IC
+ SG_ RedStopLampStatusLDW : 6|2@1+ (1,0) [0|3] ""  IC
+ SG_ MalfunctiongIndicatorLampLDW : 4|2@1+ (1,0) [0|3] ""  IC
+ SG_ AmberWarningLampStatusLDW : 2|2@1+ (1,0) [0|3] ""  IC
+ SG_ ProtectLampStatusLDW : 0|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566834704 DM1_DR: 8 BCM
+ SG_ SPNConversionMethodDR : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ OccurrenceCountDR : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ SPN3mostsignificantbitsDR : 32|3@1+ (1,0) [0|0] ""  IC
+ SG_ FMI_DR : 35|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPNsecondbyteofSPNDR : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantbitsofSPNDR : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ MalfunctiongIndicatorLampDR : 6|2@1+ (1,0) [0|3] ""  IC
+ SG_ RedStopLampStatusDR : 4|2@1+ (1,0) [0|3] ""  IC
+ SG_ AmberWarningLampStatusDR : 2|2@1+ (1,0) [0|3] ""  IC
+ SG_ ProtectLampStatusDR : 0|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566834848 DM1_AEBS: 8 BCM
+ SG_ SPNsecondbyteofSPNAEBS : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ OccurrenceCountAEBS : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ FMI_AEBS : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPN8leastsignificantbitsAEBS : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN3mostsignificantbitsAEBS : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ SPNConversionMethodAEBS : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ ReservedforSAEassignmentAEBS : 8|8@1+ (1,0) [0|0] ""  IC
+ SG_ AmberWarningLampStatusAEBS : 2|2@1+ (1,0) [0|0] ""  IC
+
+BO_ 2566834730 DM1_ACC: 8 BCM
+ SG_ SPNConversionMethodACC : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ OccurrenceCountACC : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ SPN3mostsignificantbitsACC : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ FMI_ACC : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPNsecondbyteofSPNACC : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantbitsofSPNACC : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ ReservedforSAEassignmentACC : 8|8@1+ (1,0) [0|0] ""  IC
+ SG_ AmberWarningLampStatusACC : 2|2@1+ (1,0) [0|0] ""  IC
+
+BO_ 2566834699 DM1_ABS: 8 BCM
+ SG_ SPNConversionMethodABS : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ OccurrenceCountABS : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ SPN3mostsignificantbitsABS : 37|3@1- (1,0) [0|0] ""  IC
+ SG_ FM_IABS : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPNsecondbyteosSPNABS : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantbitsofSPNABS : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ MalfunctionIndicatorLampABS : 6|2@1+ (1,0) [0|0] ""  IC
+ SG_ RedStopLampStatusABS : 4|2@1+ (1,0) [0|0] ""  IC
+ SG_ AmberWarningLampStatusABS : 2|2@1+ (1,0) [0|0] ""  IC
+ SG_ ProtectLampStatusABS : 0|2@1+ (1,0) [0|0] ""  IC
+
+BO_ 2566872855 Storage: 8 IC
+
+BO_ 2566847511 DD: 8 IC
+ SG_ FuelLevel1 : 8|8@1+ (0.4,0) [0|100] "%"  EMSG6
+
+BO_ 2566840343 VD: 8 IC
+ SG_ Totalvehicledistance : 32|16@1+ (0.125,0) [0|526385151.9] "km"  BCM
+
+BO_ 2566838561 AUXIO: 8 BCM
+ SG_ AuxiliaryI5Trailerconnected : 14|2@1+ (1,0) [0|0] ""  IC
+
+BO_ 2566870311 VCU_1: 8 VCU
+ SG_ RetarderSelectionnon_engineVCU : 12|3@1+ (1,0) [0|0] ""  IC
+
+BO_ 2566718999 DLCC2: 8 IC
+ SG_ VehicleFuelLevelLowLamp : 2|2@1+ (1,0) [0|0] ""  AMT
+
+BO_ 2566834691 DM1_AMT: 8 AMT
+ SG_ SPNConverstonMethodAMT : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ OccurrenceCountAMT : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ SPN3mostsignificantbitsAMT : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ FMI_AMT : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPNsecondbyteofSPNAMT : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantAMT : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ ReservedforSAEassignmentAMT : 8|8@1+ (1,0) [0|0] ""  IC
+ SG_ MalfunctionIndicatorLampAMT : 6|2@1+ (1,0) [0|0] ""  IC
+ SG_ RedstopLampStatusAMT : 4|2@1+ (1,0) [0|0] ""  IC
+ SG_ AmberWarningLampStatusAMT : 2|2@1+ (1,0) [0|3] ""  IC
+ SG_ ProtectLampStatusAMT : 0|2@1+ (1,0) [0|0] ""  IC
+
+BO_ 2566834727 DM1_VCU: 8 VCU
+ SG_ ProtectLampStatusVCU : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SPNConversionMethodVCU : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ OccurrenceCountVCU : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ SPN3mostsignificantbitsVCU : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ FMI_VCU : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPNsecondbyteofSPNEVCU : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantbitsVCU : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ ReservedforSAEassignmentVCU : 8|8@1+ (1,0) [0|0] ""  IC
+ SG_ MalfunctionIndicatorLampStatus2 : 6|2@1+ (1,0) [0|0] ""  IC
+ SG_ RedStopLampStatusVCU : 4|2@1+ (1,0) [0|3] ""  IC
+ SG_ AmberWarningLampStatusVCU : 2|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566834735 DM1_ECAS: 8 ECAS
+ SG_ SPNConversionMethodECAS : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ OccurrenceCountECAS : 40|7@1+ (1,0) [0|126] ""  IC
+ SG_ SPN3mostsignificantbitsECAS : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ FMI_ECAS : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPNsecondbyteofSPNECAS : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPN8leastsignificantbitsECAS : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ ReservedforSAEassignmentECAS : 8|8@1+ (1,0) [0|0] ""  IC
+ SG_ AmberWarningLampStatusECAS : 2|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2631794711 Reset: 8 IC
+ SG_ TripGroup1 : 0|2@1+ (1,0) [0|3] ""  VCU
+
+BO_ 2566896423 MSW: 8 BCM
+ SG_ AdjustDistancetoForwardVehicle : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MenuRight : 26|2@1+ (1,0) [0|0] ""  IC
+ SG_ MenuLeft : 24|2@1+ (1,0) [0|0] ""  IC
+ SG_ MenuDown : 22|2@1+ (1,0) [0|0] ""  IC
+ SG_ MenuUp : 20|2@1+ (1,0) [0|0] ""  IC
+ SG_ MenuMode : 18|2@1+ (1,0) [0|0] ""  IC
+ SG_ MenuOK : 16|2@1+ (1,0) [0|0] ""  IC
+
+BO_ 2566799393 LD: 8 BCM
+ SG_ CenterStopLight : 18|2@1+ (1,0) [0|0] ""  IC
+
+BO_ 2563768353 CL: 8 BCM
+ SG_ IlluminationBrightnessPercent : 0|8@1+ (0.4,0) [0|102] ""  IC
+
+BO_ 2566845696 AMB: 8 EMS
+ SG_ AmbientAirTemperature : 24|16@1+ (0.03125,-273) [-273|1774.96875] "¡æ" Vector__XXX
+
+BO_ 2566834688 DM1_EMS: 8 EMS
+ SG_ SPN3mostsignificantbitsEMS : 37|3@1+ (1,0) [0|0] ""  IC
+ SG_ SPNsecondbyteofSPNEMS : 24|8@1+ (1,0) [0|0] ""  IC
+ SG_ ReservedforSAEassignmentEMS : 8|8@1+ (1,0) [0|0] ""  IC
+ SG_ SPNConversionMethodEMS : 47|1@1+ (1,0) [0|0] ""  IC
+ SG_ OccurrenceCountEMS : 40|7@1+ (1,0) [0|127] ""  IC
+ SG_ FMI_EMS : 32|5@1+ (1,0) [0|31] ""  IC
+ SG_ SPN8leastsignificantbitsEMS : 16|8@1+ (1,0) [0|0] ""  IC
+ SG_ MalfunctionIndicatorLampStatus1 : 6|2@1+ (1,0) [0|0] ""  IC
+ SG_ RedStopLampStatusEMS : 4|2@1+ (1,0) [0|3] ""  IC
+ SG_ AmberWarningLampStatusEMS : 2|2@1+ (1,0) [0|3] ""  IC
+ SG_ ProtectLampStatusEMS : 0|2@1+ (1,0) [0|0] ""  IC
+ SG_ duobao_count : 48|8@1+ (1,0) [0|126] "" Vector__XXX
+
+BO_ 2565472289 metersend_21: 8 IC
+ SG_ receivemeter_fuelb23 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ receivemeter_fuelb22 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ receivemeter_fuelb21 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565472279 metersend_17: 8 IC
+ SG_ receivemeter_fuelb3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ receivemeter_fuelb2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ receivemeter_fuelb1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566849516 FBCM: 8 DCM
+ SG_ RMKeyBatteryStatus : 62|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566759916 DC2: 8 DCM
+ SG_ OpenStatusofDoor2Passenger : 8|2@1+ (1,0) [0|3] ""  IC
+ SG_ OpenStatusofDoor1Driver : 2|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566849057 SC: 8 BCM
+ SG_ IGOFFPositionLightAlert : 12|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566848801 BCU: 8 BCM
+ SG_ SleepCommand : 62|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566849569 RBCM: 8 BCM
+ SG_ TrailerConnectionStatus : 18|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2365473057 LC: 8 BCM
+ SG_ TractorFrontFogLightsCommand : 8|2@1+ (1,0) [0|3] ""  IC
+ SG_ RightTurnSignalLightsCommand : 12|2@1+ (1,0) [0|3] ""  IC
+ SG_ RearFogLightCommand : 32|2@1+ (1,0) [0|3] ""  IC
+ SG_ LeftTurnSignalLightsCommand : 14|2@1+ (1,0) [0|3] ""  IC
+ SG_ ImplementMarkerLightCommand : 28|2@1+ (1,0) [0|3] ""  IC
+ SG_ HighBeamHeadLightCommand : 6|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2349572135 AEBS2: 8 VCU
+ SG_ MessageCounter : 56|4@1+ (1,0) [0|15] ""  IC
+ SG_ MessageChecksum : 60|4@1+ (1,0) [0|15] ""  IC
+ SG_ Driveractivationdemandfor : 0|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2364551072 AEBS1_1: 8 VCU
+ SG_ CollisionWarningLevel : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Advancedemergenceybrakingsystem : 0|4@1+ (1,0) [0|15] ""  IC
+
+BO_ 2566803751 ACC2: 8 VCU
+ SG_ RequestedACCDistanceMode : 5|3@1+ (1,0) [0|7] ""  IC
+
+BO_ 2432593706 ACC1_1: 8 VCU
+ SG_ ACCDistanceAlertSignal : 52|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AdaptiveCruiseControlSetSpeed : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Speedofforwardvehicle : 0|8@1+ (1,0) [0|250] "km/h"  IC
+ SG_ ForwardCollisionWarning : 54|2@1+ (1,0) [0|3] ""  IC
+ SG_ Distancetoforwardvehicle : 8|8@1+ (1,0) [0|250] "m"  IC
+ SG_ Adaptivecruisecontrolsetdistance : 27|3@1+ (1,0) [0|7] ""  IC
+ SG_ AdaptiveCruiseControlMode : 24|3@1+ (1,0) [0|7] ""  IC
+ SG_ ACCTargetDetec : 48|2@1+ (1,0) [0|3] ""  IC
+ SG_ ACCSystemShutoffWarning : 50|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566767627 EBC5: 8 VCU
+ SG_ Hillholdermode : 5|3@1+ (1,0) [0|7] ""  IC
+
+BO_ 2566827543 AIR1: 8 IC
+ SG_ ServiceBrakeCircuit2AirPressure : 24|8@1+ (8,0) [0|2040] "kPa"  VCU
+ SG_ ServiceBrakeCircuit1AirPressure : 16|8@1+ (8,0) [0|2000] "kPa"  VCU
+ SG_ AirSuspensionSupplyPressure : 40|8@1+ (8,0) [0|2000] "kPa" Vector__XXX
+
+BO_ 2566864919 CDI: 5 IC
+ SG_ DriverIdentification : 37|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ForbidDrivingEvaluationTipsSound : 32|2@1+ (1,0) [0|0] ""  VCU
+ SG_ ForbidDrivingEvaluationTips : 24|8@1+ (1,0) [0|0] ""  VCU
+ SG_ ClearGeneralTips : 0|8@1+ (1,0) [0|255] ""  VCU
+ SG_ ClearFunctionalTips : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ ClearDrivingEvaluationTips : 16|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 2566870055 DES: 8 VCU
+ SG_ Scoringcyclestartflag : 48|2@1+ (1,0) [0|0] ""  IC
+ SG_ Totalscore : 40|8@1+ (1,0) [0|250] ""  IC
+ SG_ OperationScore : 0|8@1+ (1,0) [0|250] ""  IC
+ SG_ Mountaindrivingcomponentscore : 16|8@1+ (1,0) [0|250] ""  IC
+ SG_ Gearapplicationcomponentscore : 8|8@1+ (1,0) [0|250] ""  IC
+ SG_ Brakeapplicationcomponentscore : 24|8@1+ (1,0) [0|250] ""  IC
+ SG_ Anticipationdrivingcomponent : 32|8@1+ (1,0) [0|250] ""  IC
+
+BO_ 2566869799 DET: 8 VCU
+ SG_ DrivingEvaluationTipsBuzStates : 24|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DrivingEvaluationTipsFreMode : 20|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DrivingEvaluationTipsPriority : 16|4@1+ (1,0) [0|15] ""  IC
+ SG_ DrivingEvaluationTipsCountdown : 8|8@1+ (1,0) [0|250] "s"  IC
+ SG_ DrivingEvaluationTips : 0|8@1+ (1,0) [0|255] ""  IC
+
+BO_ 2566869543 FT: 8 VCU
+ SG_ DigitalParameter : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FunctionalTipsPriority : 16|4@1+ (1,0) [0|15] ""  IC
+ SG_ FunctionalTipsCountdownTimer : 8|8@1+ (1,0) [0|250] "s"  IC
+ SG_ FunctionalTips : 0|8@1+ (1,0) [0|255] ""  IC
+
+BO_ 2566869287 GT: 8 VCU
+ SG_ GeneralTipsPriority : 16|4@1+ (1,0) [0|15] ""  IC
+ SG_ GeneralTipsCountdownTimer : 8|8@1+ (1,0) [0|250] "s"  IC
+ SG_ GeneralTips : 0|8@1+ (1,0) [0|255] ""  IC
+
+BO_ 2566869031 VLSG: 8 VCU
+ SG_ PredictiveCruiseWorkingStatus : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngineIdleManagementTarget : 16|16@1+ (0.125,0) [0|0] ""  IC
+ SG_ EngineIdleStorageActive : 8|2@1+ (1,0) [0|0] ""  IC
+ SG_ MaximumVehicleLimitingSpeed : 6|2@1+ (1,0) [0|0] ""  IC
+ SG_ VariableVehicleLimitingSpeed : 4|2@1+ (1,0) [0|0] ""  IC
+ SG_ VehicleLimitingSpeedGovernor : 0|3@1+ (1,0) [0|7] ""  IC
+
+BO_ 2566776103 MVS: 8 VCU
+ SG_ AppliedVehicleSpeedLimit : 56|8@1+ (1,0) [0|250] "km/h"  IC
+
+BO_ 2566844455 PTO: 8 VCU
+ SG_ PowerTakeoffSetSpeed : 24|16@1+ (0.125,0) [0|8191.875] "rpm"  IC
+
+BO_ 2565865488 ERC1_DR: 8 VCU
+ SG_ EngineCoolantLoadIncrease : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ActualRetarderPercentTorque : 8|8@1+ (1,-125) [-125|125] ""  IC
+
+BO_ 2566842927 VW: 8 ECAS
+ SG_ AxleLocation : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AxleWeight : 8|16@1+ (0.5,0) [0|32767.5] "kg/bit"  IC
+
+BO_ 2566805807 ASC3: 8 ECAS
+ SG_ RelativeLevelRearAxleLeft : 32|16@1+ (0.1,-3200) [-3200|3353.5] "mm"  IC
+
+BO_ 2365479471 ASC1: 8 ECAS
+ SG_ NominalLevelRearAxle : 4|4@1+ (1,0) [0|15] ""  IC
+ SG_ LoweringControlModeRearAxle : 18|2@1+ (1,0) [0|3] ""  IC
+ SG_ LiftingControlModeRearAxle : 22|2@1+ (1,0) [0|3] ""  IC
+ SG_ LiftAxle1Positon : 38|2@1+ (1,0) [0|3] ""  IC
+ SG_ LevelControlMode : 28|4@1+ (1,0) [0|15] ""  IC
+
+BO_ 2566719271 DLCC1: 8 VCU
+ SG_ EngineIdleManagementActiveLamp : 18|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566881831 EconomicalInfo: 8 VCU
+ SG_ EconomicVehicleSpeed_L : 32|16@1+ (0.00390625,0) [0|255.99609375] "km/h"  IC
+ SG_ EconomicVehicleSpeed_H : 48|16@1+ (0.00390625,0) [0|255.99609375] "km/h"  IC
+ SG_ EconomicEngineSpeed_L : 0|16@1+ (0.125,0) [0|8191.875] "rpm"  IC
+ SG_ EconomicEngineSpeed_H : 16|16@1+ (0.125,0) [0|8191.875] "rpm"  IC
+
+BO_ 2348875815 TC1: 8 VCU
+ SG_ TransmissionMode1 : 40|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2566804992 TI1: 8 EMS
+ SG_ CatalystTankLevel : 0|8@1+ (0.4,0) [0|102] "%"  IC
+
+BO_ 2365484055 TCO1: 8 IC
+ SG_ Tachographvehiclespeed : 48|16@1+ (0.00390625,0) [0|255.99609375] ""  VCU
+
+BO_ 2566873091 AMT_1: 8 AMT
+ SG_ TargetGearFlashStates : 28|2@1+ (1,0) [0|3] ""  IC
+ SG_ ShiftMode : 20|2@1+ (1,0) [0|3] ""  IC
+ SG_ LMode : 53|2@1+ (1,0) [0|3] ""  IC
+ SG_ FrequencyMode : 59|2@1+ (1,0) [0|3] ""  IC
+ SG_ EPMode : 30|2@1+ (1,0) [0|3] ""  IC
+ SG_ CMode : 62|2@1+ (1,0) [0|3] ""  IC
+ SG_ CharacterDisplayControl : 32|8@1+ (1,0) [0|255] ""  IC
+ SG_ AlarmLightStates : 48|2@1+ (1,0) [0|3] ""  IC
+ SG_ AlarmBuzzerStates : 50|3@1+ (1,0) [0|7] ""  IC
+
+BO_ 2565866755 ETC2: 8 AMT
+ SG_ SelectedGear : 0|8@1+ (1,-125) [-125|125] ""  IC
+ SG_ CurrentGear : 24|8@1+ (1,-125) [-125|125] ""  IC
+ SG_ ActualGearRatio : 8|16@1+ (0.001,0) [0|65.535] ""  IC
+
+BO_ 2348810279 TSC1_VE: 8 VCU
+ SG_ RequestedSpeed : 8|16@1+ (0.125,0) [0|8191.875] ""  IC
+ SG_ OverrideControlMode : 0|2@1+ (1,0) [0|3] ""  IC
+ SG_ MessageCounter : 56|4@1+ (1,0) [0|15] ""  IC
+ SG_ MessageChecksum : 60|4@1+ (1,0) [0|15] ""  IC
+
+BO_ 2566803211 VDC1: 8 VCU
+ SG_ VDCInformationSignal : 0|2@1+ (1,0) [0|3] ""  IC
+ SG_ VDCFullyOperational : 2|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2565865739 EBC1_1: 8 VCU
+ SG_ Tractioncontroloverrideswitch : 22|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TractorMountedTrailerABS : 62|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ATCASRInformationSignal : 46|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ EBSRedWarningSignal : 42|2@1+ (1,0) [0|3] ""  IC
+ SG_ ASRoffroadswitch : 18|2@1+ (1,0) [0|3] ""  IC
+ SG_ ASRenginecontrolactive : 0|2@1+ (1,0) [0|3] ""  IC
+ SG_ ASRbrakecontrolactive : 2|2@1+ (1,0) [0|3] ""  IC
+ SG_ ABSFullyOperational : 40|2@1+ (1,0) [0|3] ""  IC
+ SG_ ABSEBSAmberWarningSignal : 44|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2564882215 CM1: 8 VCU
+ SG_ SelectedMaximumVehicleSpeed : 56|8@1+ (1,0) [0|250] ""  IC
+
+BO_ 2566877479 ECG_VCU: 8 VCU
+ SG_ Recommendedgearofcurrent : 8|8@1+ (1,-125) [-125|125] ""  IC
+ SG_ EngineCalculatedGear : 0|8@1+ (1,-125) [-125|130] ""  IC
+
+BO_ 2566841639 HOURS_VCU: 8 VCU
+ SG_ TotalEngineRevolutions : 32|32@1+ (1000,0) [0|4294967295000] "r"  IC
+ SG_ TotalEngineHours : 0|32@1+ (0.05,0) [0|214748364.75] "hr"  IC
+
+BO_ 2566844928 LFE: 8 EMS
+ SG_ InstantaneousFuelEconomy : 16|16@1+ (0.001953125,0) [0|127.998046875] "km/L"  IC
+ SG_ FuelRate : 0|16@1+ (0.05,0) [0|3276.75] "L/h"  IC
+ SG_ AverageFuelEconomy : 32|16@1+ (0.001953125,0) [0|127.998046875] "km/L"  IC
+
+BO_ 2566842624 LFC: 8 EMS
+ SG_ TripFuel : 0|32@1+ (0.5,0) [0|2147483647.5] "L"  IC
+ SG_ ToalFuelUsed : 32|32@1+ (0.5,0) [0|2147483647.5] "L"  IC
+
+BO_ 2565865513 ERC1_EXR: 8 EMS
+ SG_ ActualRetarderPercentTorque : 8|8@1+ (1,-125) [-125|125] "%"  IC
+
+BO_ 2565865487 ERC1_ER: 8 EMS
+ SG_ ActualRetarderPercentTorque : 8|8@1+ (1,-125) [-125|125] "%"  IC
+
+BO_ 2566843904 ET: 8 EMS
+ SG_ Enginecoolanttemperature : 0|8@1+ (1,-40) [-40|255] "¡æ"  IC
+
+BO_ 2566844199 EFLP1_VCU: 8 VCU
+ SG_ EngineOilLevel : 16|8@1+ (0.4,0) [0|100] "%"  IC
+
+BO_ 2566844160 EFLP1_EMS: 8 EMS
+ SG_ EngineOilPressure : 24|8@1+ (4,0) [0|1020] "kPa"  IC
+
+BO_ 2566844711 CCVS_VCU: 8 VCU
+ SG_ CruiseControlEnable : 26|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ vehiclespeed : 8|16@1+ (0.00390625,0) [0|255] "km/h"  IC
+ SG_ PTOGovernorState : 48|5@1+ (1,0) [0|31] ""  IC
+ SG_ Parkingbrakeswitch : 2|2@1+ (1,0) [0|3] ""  IC
+ SG_ CruiseControlState : 53|3@1+ (1,0) [0|7] ""  IC
+ SG_ Cruisecontrolsetspeed : 40|8@1+ (1,0) [0|250] "km/h"  IC
+ SG_ CruisecontrolActive : 24|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2364539687 EEC2_VCU: 8 VCU
+ SG_ Acceleratorpedalposition : 8|8@1+ (0.4,0) [0|100] "%"  IC
+
+BO_ 2364539904 EEC1_EMS: 8 EMS
+ SG_ Enginespeed : 24|16@1+ (0.125,0) [0|8192] "r/min"  IC
+
+BO_TX_BU_ 2566767627 : AMT,VCU;
+
+
+EV_ var_PreditiveCruiseWorkingStatus: 0 [0|0] "" 0 1 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_VehicleSpeedLimitWarning: 0 [0|7] "" 0 2 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_VehicleSpeedLimitValue: 0 [0|598] "" 0 3 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_VehicleSpeedLimitStatus: 0 [0|3] "" 0 4 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_VDHR_VCU: 0 [0|0] "" 0 5 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ HighResolutionTotalVehicleD: 0 [0|0] "" 0 6 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_EPB1: 0 [0|2] "" 1 7 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ AutoholdWorkingStatus: 0 [0|7] "" 0 8 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EPBworkingmode: 0 [0|7] "" 0 9 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ AdjustDistancetoForwardVehicle: 0 [0|3] "" 0 10 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ Tractioncontroloverrideswitch: 0 [0|0] "" 0 11 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ActualGearRatio: 1 [0|65.535] "" 0 12 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TirePressureThresholdDetection: 0 [0|7] "" 0 13 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TireAirLeakageRate: 1 [0|6553.5] "" 6553.5 14 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ExtendedTirePressureSupport: 0 [0|3] "" 3 15 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TireStatus: 0 [0|3] "" 3 16 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TireTemperature: 1 [-273|1774.96875] "" 1774.96875 17 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TirePressure_TIRE1: 1 [0|1020] "" 1020 18 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TireLocation_TIRE1: 0 [0|255] "" 255 19 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TireLocation_TIRE2: 0 [0|255] "" 255 20 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TirePressure_TIRE2: 0 [0|65535] "" 65535 21 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ RequiredTirePressure: 0 [0|65535] "" 65535 22 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TireLocation_TIRE3: 0 [0|255] "" 255 23 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TireSensorMatchStatus: 0 [0|3] "" 3 24 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TireSensorElectricalFault: 0 [0|3] "" 3 25 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TireLocation_TPRI: 0 [0|255] "" 255 26 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ReferenceTirePressure: 1 [0|2040] "" 2040 27 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TireLocation_TPSLI: 0 [0|255] "" 255 28 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TirePressureSensorSelfLearning: 0 [0|7] "" 7 29 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ CalibrationStatus: 0 [0|7] "" 0 30 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ DSMWarningStatus: 0 [0|7] "" 0 31 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ DSM_Status: 0 [0|7] "" 0 32 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ LDWStatus: 0 [0|7] "" 1 33 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ LaneTrackingStatusLeftSide: 0 [0|3] "" 0 34 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ LaneTrackingStatusRightSide: 0 [0|3] "" 0 35 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ LaneDepartureRight: 0 [0|3] "" 0 36 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ LaneDepartureLeft: 0 [0|3] "" 0 37 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_LDW_FCW1: 0 [0|1] "" 1 38 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_FLI2: 0 [0|1] "" 1 39 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_FLI1: 0 [0|1] "" 1 40 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_TPSLI: 0 [0|1] "" 0 41 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_TIRE3: 0 [0|1] "" 1 42 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_TPRI: 0 [0|1] "" 0 43 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_TIRE2: 0 [0|1] "" 1 44 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_TIRE1: 0 [0|1] "" 1 45 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ SmartKeyBatteryStatus: 0 [0|3] "" 0 46 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ESCLNotLockWarning: 0 [0|3] "" 0 47 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ESCLNotUnlockWarning: 0 [0|3] "" 0 48 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ SmartStartConditionWarning: 0 [0|3] "" 0 49 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ NoLegalSmartKeyIdentified: 0 [0|3] "" 0 50 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ NoLegalSmartKeyInsideVehicle: 0 [0|3] "" 0 51 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ PowerOffBeforeLeavingVehicle: 0 [0|3] "" 0 52 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_PS_1: 0 [0|1] "" 1 53 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ MenuRight: 0 [0|3] "" 0 54 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ MenuLeft: 0 [0|3] "" 0 55 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ MenuDown: 0 [0|3] "" 0 56 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ MenuUp: 0 [0|3] "" 0 57 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ MenuMode: 0 [0|3] "" 0 58 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ MenuOK: 0 [0|3] "" 0 59 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ CenterStopLight: 0 [0|3] "" 0 60 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ AuxiliaryI5Trailerconnected: 0 [0|3] "" 0 61 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_MSW: 0 [0|1] "" 1 62 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_LD: 0 [0|1] "" 1 63 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_AUXIO: 0 [0|1] "" 1 64 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ CollisionWarningLevel: 0 [0|15] "" 0 65 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ AxleLocation: 0 [0|255] "" 255 66 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ AxleWeight: 1 [0|32767.5] "" 0 67 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ RelativeLevelRearAxleLeft: 1 [-3200|3353.5] "" 0 68 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ NominalLevelRearAxle: 0 [0|15] "" 0 69 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ LoweringControlModeRearAxle: 0 [0|3] "" 3 70 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ LiftingControlModeRearAxle: 0 [0|3] "" 3 71 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ LiftAxle1Positon: 0 [0|3] "" 3 72 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ LevelControlMode: 0 [0|15] "" 0 73 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_VW: 0 [0|1] "" 1 74 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ASC3: 0 [0|1] "" 1 75 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ASC1: 0 [0|1] "" 1 76 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ PTO2Active_Reserved: 0 [0|3] "" 0 77 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ PTO1Active_Reserved: 0 [0|3] "" 0 78 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TemperaturetooHigh: 0 [0|3] "" 0 79 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ LowAirPressure: 0 [0|3] "" 0 80 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ClutchOverload: 0 [0|3] "" 0 81 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ClutchWear: 0 [0|3] "" 0 82 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ Automatic_mode: 0 [0|3] "" 0 83 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ManoeuveringMode: 0 [0|3] "" 0 84 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ WorkshopRequest_SpannerWarnning: 0 [0|3] "" 0 85 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ StopRequest: 0 [0|3] "" 0 86 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TransmissionModeIndicator: 0 [0|3] "" 0 87 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ DriverInducementIndicatorStatus: 0 [0|7] "" 0 88 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EngineFuelFilterRestriLampCom: 0 [0|3] "" 0 89 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EngineOilPressureLowLampCommand: 0 [0|3] "" 0 90 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ DieselParticulateFilterReg: 0 [0|3] "" 0 91 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ DieselParticulateFilterStatus: 0 [0|7] "" 0 92 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ DieselParticulateFilterActiveReg: 0 [0|3] "" 0 93 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ DieselParticulateFilterLampCom: 0 [0|7] "" 0 94 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_TC2DIS_ZF: 0 [0|1] "" 1 95 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ETC7: 0 [0|1] "" 1 96 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_EMS_3: 0 [0|1] "" 1 97 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_DLCC1_EMS: 0 [0|1] "" 1 98 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_CM1_EMS: 0 [0|1] "" 1 99 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_DPFC1: 0 [0|1] "" 1 100 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ RetarderSelectionnon_engineVCU: 0 [0|7] "" 0 101 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_VCU_1: 0 [0|1] "" 1 102 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ Scoringcyclestartflag: 0 [0|3] "" 1 103 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EngineIdleManagementTarget: 1 [0|8191.875] "" 0 104 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EngineIdleStorageActive: 0 [0|3] "" 0 105 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ MaximumVehicleLimitingSpeed: 0 [0|3] "" 0 106 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ VariableVehicleLimitingSpeed: 0 [0|3] "" 0 107 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EngineCoolantLoadIncrease: 0 [0|3] "" 3 108 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ TractorMountedTrailerABS: 0 [0|3] "" 0 109 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ AmbientAirTemperature: 1 [-273|1774.96875] "" 24 110 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_AMB: 0 [0|1] "" 1 111 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_CL: 0 [0|0] "" 1 112 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ IlluminationBrightnessPercent: 1 [0|102] "" 0 113 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ shuangshan: 0 [0|0] "" 0 114 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ACCDistanceAlertSignal: 0 [0|0] "" 0 115 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ AdaptiveCruiseControlSetSpeed: 0 [0|0] "" 255 116 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ DrivingEvaluationTipsBuzStates: 0 [0|0] "" 0 117 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ DrivingEvaluationTipsFreMode: 0 [0|0] "" 0 118 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ DigitalParameter: 0 [0|0] "" 0 119 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ATCASRInformationSignal: 0 [0|3] "" 0 120 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ CruiseControlEnable: 0 [0|3] "" 0 121 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_FBCM: 0 [0|1] "" 1 122 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_DC2: 0 [0|1] "" 1 123 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_SC: 0 [0|1] "" 1 124 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_BCU: 0 [0|1] "" 0 125 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_RBCM: 0 [0|1] "" 0 126 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_LC: 0 [0|1] "" 1 127 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_rmkeybatterystatus: 0 [0|3] "" 0 128 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_openstatusofdoor2: 0 [0|3] "" 0 129 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_openstatusofdoor1: 0 [0|3] "" 0 130 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_igoffpositionlight: 0 [0|3] "" 0 131 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_sleepcommand: 0 [0|3] "" 0 132 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_trailerconnectrion: 0 [0|3] "" 0 133 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_rearfoglight: 0 [0|3] "" 0 134 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_implementmarkerlight: 0 [0|3] "" 0 135 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_leftturnsignallight: 0 [0|3] "" 0 136 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_rightturnsignallight: 0 [0|3] "" 0 137 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_tractorfrontfoglight: 0 [0|3] "" 0 138 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_highreamheadlight: 0 [0|3] "" 0 139 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ ENamt_EBC5: 0 [0|1] "" 0 140 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ varamt_hillholder: 0 [0|7] "" 0 141 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ETC2: 0 [0|1] "" 1 142 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_AMT: 0 [0|1] "" 1 143 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_cmode: 0 [0|3] "" 0 144 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_frequencymode: 0 [0|3] "" 0 145 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_lmode: 0 [0|3] "" 0 146 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_alarmbuzzerstates: 0 [0|7] "" 0 147 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_alarmlightstates: 0 [0|3] "" 0 148 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_characterdisplaycontrol: 0 [0|255] "" 0 149 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_epmode: 0 [0|3] "" 0 150 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_targetgearflashstates: 0 [0|3] "" 0 151 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_shiftmode: 0 [0|3] "" 0 152 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_currentgear: 1 [-125|125] "" 0 153 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_selectedgear: 1 [-125|125] "" 0 154 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_AEBS2: 0 [0|1] "" 1 155 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_AEBS1: 0 [0|1] "" 1 156 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ACC2: 0 [0|1] "" 0 157 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_EBC5: 0 [0|1] "" 1 158 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ACC1: 0 [0|1] "" 1 159 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_DES: 0 [0|1] "" 1 160 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_DET: 0 [0|1] "" 1 161 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_FT: 0 [0|1] "" 1 162 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_GT: 0 [0|1] "" 1 163 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_VLSG: 0 [0|1] "" 1 164 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_MVS: 0 [0|1] "" 1 165 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_PTO: 0 [0|1] "" 1 166 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ERC1_DR: 0 [0|1] "" 1 167 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_DLCC1: 0 [0|1] "" 1 168 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_Economicalinfo: 0 [0|1] "" 1 169 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_TC1: 0 [0|1] "" 1 170 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_TSC1_VE: 0 [0|1] "" 1 171 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_VDC1: 0 [0|1] "" 1 172 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_EBC1: 0 [0|1] "" 1 173 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_CM1: 0 [0|1] "" 1 174 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ECG_VCU: 0 [0|1] "" 1 175 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_HOURS_VCU: 0 [0|1] "" 0 176 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_EFLP1_VCU: 0 [0|1] "" 0 177 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_CCVS_VCU: 0 [0|1] "" 1 178 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_EEC2_VCU: 0 [0|1] "" 1 179 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_driveractivationdemand: 0 [0|3] "" 0 180 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_advancedemergencybrak: 0 [0|15] "" 0 181 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_requestedACCdistancemode: 0 [0|7] "" 0 182 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_forwardcollisionwarning: 0 [0|3] "" 0 183 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_ACCsystemshutoffwarning: 0 [0|3] "" 0 184 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_ACCtargetdetec: 0 [0|3] "" 0 185 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_adaptivecruisecontrolset: 0 [0|7] "" 0 186 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_adaptivecruisecontrolmode: 0 [0|7] "" 0 187 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_hillholdermode: 0 [0|7] "" 0 188 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_drivingevaluationtips: 0 [0|255] "" 0 189 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_functionaltips: 0 [0|255] "" 0 190 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_generaltips: 0 [0|255] "" 0 191 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_vehiclelimitingspeed: 0 [0|7] "" 0 192 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_engineidlemanagement: 0 [0|3] "" 0 193 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_transmissionmode1: 0 [0|3] "" 0 194 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_overridecontrolmode: 0 [0|3] "" 0 195 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_VDCfullyoperational: 0 [0|3] "" 0 196 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_VDCinformationsignal: 0 [0|3] "" 0 197 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_ABSamberwarningsignal: 0 [0|3] "" 0 198 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_EBSredwarningsignal: 0 [0|3] "" 0 199 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_ABSfullyoperational: 0 [0|3] "" 0 200 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_ASRoffroadswitch: 0 [0|3] "" 0 201 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_ASRbrakecontrolactive: 0 [0|3] "" 0 202 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_ASRenginecontrolactive: 0 [0|3] "" 0 203 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_cruisecontrolstate: 0 [0|7] "" 0 204 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_PTOgovernorstate: 0 [0|15] "" 0 205 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_cruisecontrolactive: 0 [0|3] "" 0 206 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ var_parkingbrakeswitch: 0 [0|3] "" 0 207 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_acceleratorpedalposition: 1 [0|100] "%" 0 208 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_cruisecontrolsetspeed: 1 [0|250] "km/h" 0 209 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_engineoillevel: 1 [0|100] "" 0 210 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_totalenginerevolutions: 1 [0|4211081215000] "" 0 211 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_totalenginehours: 1 [0|210554060.75] "" 0 212 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_selectedmaximumlimit: 1 [0|250] "" 0 213 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_recommendedgearofcondition: 1 [-125|125] "" 0 214 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_enginecalculatedgear: 1 [-125|125] "" 0 215 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_messagechecksum7: 0 [0|7] "" 0 216 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_messagecounter7: 0 [0|7] "" 0 217 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_requestedspeed: 1 [0|8031.875] "rpm" 0 218 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_economicvehiclespeedH: 1 [0|250.996] "" 0 219 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_economicvehiclespeedL: 1 [0|250.996] "km/h" 0 220 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_economicenginespeed_H: 1 [0|8031.875] "rpm" 0 221 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_economicenginespeed_L: 1 [0|8031.875] "rpm" 0 222 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_actualretardertorque: 1 [-125|125] "%" 0 223 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_powertakeoffsetspeed: 1 [0|8031.875] "rpm" 0 224 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_appliedvehiclespeedlimit: 1 [0|250] "km/h" 0 225 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_generaltipstimer: 1 [0|250] "s" 0 226 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_generaltipspriority: 0 [0|14] "" 0 227 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_functionaltipstimer: 1 [0|250] "s" 0 228 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_drivingevaluationtipstimer: 1 [0|250] "s" 0 229 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ET: 0 [0|1] "" 1 230 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_TI1: 0 [0|1] "" 1 231 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_LFE: 0 [0|1] "" 1 232 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_LFC: 0 [0|1] "" 1 233 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ERC1_EXR: 0 [0|1] "" 1 234 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_ERC1_ER: 0 [0|1] "" 1 235 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_EFLP1_EMS: 0 [0|1] "" 1 236 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ EN_EEC1_EMS: 0 [0|1] "" 1 237 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_averagefueleconomy: 1 [0|125.5] "" 0 238 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_messagechecksum: 0 [0|15] "" 0 239 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_Instantaneousfueleconomy: 1 [0|125.5] "" 0 240 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_brakeapplicationscore: 1 [0|250] "" 0 241 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_Fuelrate: 1 [0|3212.75] "" 0 242 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_mountaindrivingscore: 1 [0|250] "" 0 243 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_Totalfuelused: 1 [0|2105540607.5] "" 0 244 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_anticipationdrivingscore: 1 [0|250] "" 0 245 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_Tripfuel: 1 [0|2105540607.5] "" 0 246 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_totalscore: 1 [0|250] "" 0 247 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_EXR_ActualRetarderTorque: 1 [-125|125] "" 0 248 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_gearapplicaionscore: 1 [0|250] "" 0 249 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_ER_ActualRetarderTorque: 1 [-125|125] "" 0 250 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_operationscore: 1 [0|250] "" 0 251 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_Catalysttanklevel: 1 [0|100] "" 0 252 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_messagecounter: 0 [0|15] "" 0 253 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_Enginecoolanttemperature: 1 [-40|255] "" -40 254 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_speedofforwardvehicle: 1 [0|250] "km/h" 0 255 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_Engineoilpressure: 1 [0|1000] "" 0 256 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_drivingevaluationpriority: 0 [0|14] "" 0 257 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_enginespeed: 1 [0|8192] "" 0 258 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_distancetoforwardvehicle: 1 [0|250] "m" 0 259 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_functionaltipspriority: 0 [0|14] "" 0 260 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+EV_ temp_vehiclespeed: 1 [0|255] "km/h" 0 261 DUMMY_NODE_VECTOR0 Vector__XXX;
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+

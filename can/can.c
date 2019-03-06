@@ -11,7 +11,8 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
-#include "honda_civic_touring_2016_can_generated.h"
+//#include "honda_civic_touring_2016_can_generated.h"
+#include "j7.h"
 
 static int open_can_device(const char *port)
 {
@@ -42,23 +43,27 @@ static uint64_t u64_from_can_msg(const uint8_t m[8]) {
                 | ((uint64_t)m[3] << 24) | ((uint64_t)m[2] << 16) | ((uint64_t)m[1] << 8) | ((uint64_t)m[0] << 0);
 }
 
+//phy value
+double EngSpeed;
+double EngTemp;
+
 static int process_can_message(struct can_frame *frame)
 {
-	can_obj_honda_civic_touring_2016_can_generated_h_t dbc;
+	can_obj_j7_h_t dbc;
 	uint64_t data;
-	double w_fl,w_fr,w_rl,w_rr;
 
         data = u64_from_can_msg(frame->data);
 	
 	if( unpack_message(&dbc, frame->can_id, data, frame->can_dlc, 0) == 0) {
-		print_message(&dbc,frame->can_id, stdout); 
+		//print_message(&dbc,frame->can_id, stdout); 
 		switch(frame->can_id){
-		  case 0x1d0:
-			decode_can_0x1d0_WHEEL_SPEED_FL(&dbc, &w_fl);
-			decode_can_0x1d0_WHEEL_SPEED_FR(&dbc, &w_fr);
-			decode_can_0x1d0_WHEEL_SPEED_RL(&dbc, &w_rl);
-			decode_can_0x1d0_WHEEL_SPEED_RR(&dbc, &w_rr);
-		  	printf("FL=%lf,FR=%lf,RL=%lf,RR=%lf\n", w_fl, w_fr, w_rl, w_rr);
+		  case 0x8cf00400:
+			decode_can_0x8cf00400_Enginespeed(&dbc, &EngSpeed);
+		  	printf("EngSpeed=\t%lf\n",EngSpeed);
+		  break;
+		  case 0x98feee00:
+			decode_can_0x98feee00_Enginecoolanttemperature(&dbc, &EngTemp);
+			printf("EngTemp=\t%lf\n", EngTemp);
 		  break;
 		  default:
 		  break;
@@ -92,10 +97,10 @@ static int read_can_loop(int port)
 						return -errno;
 					}
 				if (recvbytes) {
-					printf("id 0x%03x, dlc = %d\n\t", frame_rd.can_id, frame_rd.can_dlc);
-					for (unsigned i = 0; i < frame_rd.can_dlc; i++)
-						printf("%02x ", frame_rd.data[i]);
-					printf("\n");
+					//printf("id 0x%03x, dlc = %d\n\t", frame_rd.can_id, frame_rd.can_dlc);
+					//for (unsigned i = 0; i < frame_rd.can_dlc; i++)
+					//	printf("%02x ", frame_rd.data[i]);
+					//printf("\n");
 					process_can_message(&frame_rd);
 				}
 			}
@@ -137,7 +142,7 @@ int main(int argc, char **argv)
 	char *port = "vcan0";
 	int i;
 	int fd = 0;
-#if 0
+	
 	for(i = 1; i < argc && argv[i][0] == '-'; i++)
 		switch(argv[i][1]) {
 		case '\0': /* stop argument processing */
@@ -158,7 +163,6 @@ int main(int argc, char **argv)
 			return EXIT_FAILURE;
 			break;
 		}
-#endif
 
 done:
 	fd = open_can_device(port);
