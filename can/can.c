@@ -8,8 +8,21 @@
 #include <fcntl.h>
 #include <sys/ioctl.h>
 #include <net/if.h>
+
+#if defined(__APPLE__)
+
+#include <macos/can.h>
+#include <macos/can/raw.h>
+
+#elif defined(__LINUX__)
+
 #include <linux/can.h>
 #include <linux/can/raw.h>
+
+#else 
+ #error "No support this OS!"
+
+#endif
 
 //#include "honda_civic_touring_2016_can_generated.h"
 #include "j7.h"
@@ -20,6 +33,7 @@ static int open_can_device(const char *port)
 	struct sockaddr_can addr;
 	int r;
 	int fd;
+#ifndef __APPLE__
 	if((fd = socket(PF_CAN, SOCK_RAW, CAN_RAW)) < 0)
 		return -1;
 
@@ -35,6 +49,7 @@ static int open_can_device(const char *port)
 		return r;
 	if((r = bind(fd, (struct sockaddr *)&addr, sizeof(addr))) < 0)
 		return r;
+#endif
 	return fd;
 }
 
@@ -44,8 +59,9 @@ static uint64_t u64_from_can_msg(const uint8_t m[8]) {
 }
 
 //phy value
-double EngSpeed;
-double EngTemp;
+double Enginespeed;
+double Enginecoolanttemperature;
+double RelativeLevelRearAxleLeft;
 
 static int process_can_message(struct can_frame *frame)
 {
@@ -58,12 +74,16 @@ static int process_can_message(struct can_frame *frame)
 		//print_message(&dbc,frame->can_id, stdout); 
 		switch(frame->can_id){
 		  case 0x8cf00400:
-			decode_can_0x8cf00400_Enginespeed(&dbc, &EngSpeed);
-		  	printf("EngSpeed=\t%lf\n",EngSpeed);
+			decode_can_0x8cf00400_Enginespeed(&dbc, &Enginespeed);
+		  	printf("Enginespeed=\t%lf\n",Enginespeed);
 		  break;
 		  case 0x98feee00:
-			decode_can_0x98feee00_Enginecoolanttemperature(&dbc, &EngTemp);
-			printf("EngTemp=\t%lf\n", EngTemp);
+			decode_can_0x98feee00_Enginecoolanttemperature(&dbc, &Enginecoolanttemperature);
+			printf("Enginecoolanttemperature=\t%lf\n", Enginecoolanttemperature);
+		  break;
+		  case 0x98fe592f:
+		    decode_can_0x98fe592f_RelativeLevelRearAxleLeft(&dbc, &RelativeLevelRearAxleLeft);
+		    printf("RelativeLevelRearAxleLeft=\t%lf\n", RelativeLevelRearAxleLeft);
 		  break;
 		  default:
 		  break;

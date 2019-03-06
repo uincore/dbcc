@@ -1,5 +1,5 @@
 LDFLAGS  = -lm
-CFLAGS   = -std=gnu99 -Wall -Wextra -g -O2
+CFLAGS   = -std=gnu99 -Wall -Wextra -g -O2 -I./
 RM      := rm
 OUTDIR  := out
 SOURCES := ${wildcard *.c}
